@@ -1,0 +1,232 @@
+﻿.home-section {
+  padding: 10px 40px 55px 40px; }
+  .home-section .form-group {
+    position: relative;
+    margin: 40px 0 20px 0; }
+  .home-section .form-group > label.control-label {
+    position: absolute;
+    bottom: 5px; }
+  .home-section .form-group input {
+    border: 0;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%; }
+  .home-section .form-group input:active, .home-section .form-group input:focus {
+    border: 0;
+    border-bottom: 2px solid gray;
+    border-radius: 0;
+    box-shadow: none; }
+    .home-section .form-group input:active ~ label.control-label, .home-section .form-group input:focus ~ label.control-label {
+      bottom: auto;
+      top: -35px; }
+  .home-section .form-group input:valid + label.control-label {
+    bottom: auto;
+    top: -35px; }
+  .home-section h3 {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    font-weight: bolder;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.4), -1px 0 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(0, 0, 0, 0.4), 0 -1px 1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 45px;
+    color: #c2c2c2; }
+  .home-section h3:after {
+    content: " ";
+    position: absolute;
+    bottom: -2px;
+    width: 102%;
+    left: -1%;
+    right: -1%;
+    border: none;
+    border-bottom: 1px solid lightgray; }
+  .home-section input {
+    border-radius: 0; }
+  .home-section input[type=text], .home-section input[type=email] {
+    background-color: transparent; }
+  .home-section input[type=submit], .home-section input[type=button], .home-section button, .home-section .btn {
+    float: right; }
+  .home-section .btn {
+    color: #006eff;
+    background-color: transparent;
+    border: 1px solid #006eff;
+    transition: all .6s ease; }
+  .home-section .btn:hover {
+    color: white;
+    background-color: #145ff0;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(50, 160, 255, 0.8) !important; }
+
+.section-inverse {
+  background-color: #31668E; }
+  .section-inverse h3 {
+    color: white;
+    text-shadow: 0 0 2px rgba(226, 226, 226, 0.45); }
+  .section-inverse .btn {
+    color: #dcdcdc;
+    border: 1px solid #fff;
+    transition: all .6s ease; }
+  .section-inverse .btn:hover {
+    color: white;
+    background-color: #1e82ff;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(30, 130, 255, 0.7) !important; }
+
+.group {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* LABEL ======================================= */
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+  /* HIGHLIGHTER ================================== */
+  /* active state */
+  /* ANIMATIONS ================ */ }
+  .group input {
+    font-size: 16px;
+    padding: 10px 10px 10px 15px;
+    display: block;
+    /*width: 80%;*/
+    max-width: 100%;
+    /*margin-left: 20%;*/
+    border: none;
+    border-bottom: 1px solid #151515;
+    color: #151515; }
+  .group input:focus {
+    outline: none; }
+  .group label {
+    color: #c2c2c2;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    pointer-events: none;
+    display: inline-block;
+    /*width: 20%;
+        top: -15px;*/
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .group input:focus {
+    color: #3874ff; }
+  .group input:focus ~ label {
+    color: #3874ff; }
+  .group .bar {
+    position: relative;
+    display: block;
+    /*width: 80%;
+        margin-left: 20%;*/ }
+  .group .bar:before, .group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #3874ff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .group .bar:before {
+    left: 50%; }
+  .group .bar:after {
+    right: 50%; }
+  .group input:focus ~ .bar:before, .group input:focus ~ .bar:after {
+    width: 50%; }
+  .group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    display: none; }
+  .group input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease; }
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background-color: #3874ff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background-color: #3874ff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+@keyframes inputHighlighter {
+  from {
+    background-color: #3874ff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+.section-inverse .group input {
+  border-bottom: 1px solid #c2c2c2;
+  color: #c2c2c2; }
+
+.section-inverse .group label {
+  color: #c2c2c2; }
+
+.section-inverse .group input:focus {
+  color: #ffffff; }
+
+.section-inverse .group input:focus ~ label, .section-inverse .group input:valid ~ label {
+  color: #ffffff; }
+
+.section-inverse .group .bar:before, .section-inverse .group .bar:after {
+  background: #ffffff; }
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background-color: #ffffff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background-color: #ffffff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+@keyframes inputHighlighter {
+  from {
+    background-color: #ffffff; }
+  to {
+    width: 0;
+    background-color: transparent; } }
+
+@media only screen and (min-device-width: 728px) {
+  .group > input {
+    width: 80%;
+    margin-left: 20%;
+    position: relative;
+    display: inline-block; }
+  .group > label {
+    width: 20%;
+    top: -15px; }
+  .group > .bar {
+    width: 80%;
+    margin-left: 20%; } }
+
+@media only screen and (max-device-width: 728px) {
+  .group > input {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    display: inline-block; }
+  .group > label {
+    width: 40%;
+    top: -55px; }
+  .group > .bar {
+    width: 100%;
+    margin: 0; } }
+

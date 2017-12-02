@@ -1,0 +1,104 @@
+﻿@model Etohum.NextStep.Web.ViewModel.SubscribeViewModel
+
+@section styles
+{
+    @Styles.Render("~/statics/styles/subscription.min.css")
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "" }))
+{
+    <div class="row">
+        <div class="col-md-6 home-section section-inverse">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    @{
+                        if (!Model.SubscriptionIsOk)
+                        {
+                            var errorMsg = Model.Message ?? "Unknow error occored.";
+
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong>&nbsp; <span class="message-text">@errorMsg</span>
+                            </div>
+
+                            <input type="submit" value="try again" class="btn btn-danger btn-lg" formaction=@Url.Action("Index") formmethod="get" />
+                        }
+                        else if (@ViewBag.SubscribeMsg != null)
+                        {
+                            var userCreationMsg = ViewBag.UserCreatedMsg ?? "Your subscription will be added to system soon & you will get notified through the given email address";
+
+                            <div class="alert alert-success">
+                                <strong>Sent Successfully!</strong>&nbsp;<span class="message-text">@userCreationMsg</span>
+                            </div>
+                            <input type="submit" value="Subscribe more" class="btn btn-primary btn-lg" formaction=@Url.Action("Index") formmethod="get" />
+                        }
+                        else
+                        {
+                            <h3>Subscription</h3>
+                            <div class="group">
+                                @Html.EditorFor(m => m.FirstName)
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                @Html.LabelFor(m => m.FirstName)
+                            </div>
+                            <div class="group">
+                                @Html.EditorFor(m => m.LastName)
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                @Html.LabelFor(m => m.LastName)
+                            </div>
+                            <div class="group">
+                                @Html.EditorFor(m => m.EmailAddress)
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                @Html.LabelFor(m => m.EmailAddress)
+                            </div>
+                            <input type="submit" value="Subscribe" class="btn btn-primary btn-lg" />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 home-section">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    @{
+                        if (!Model.SubscriptionIsOk)
+                        {
+                            var errorMsg = Model.Message ?? "Unknow error occored.";
+
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong>&nbsp; <span class="message-text">@errorMsg</span>
+                            </div>
+
+                            <input type="submit" value="try again" class="btn btn-danger btn-lg" formaction=@Url.Action("Index") formmethod="get" />
+                        }
+                        else if (@ViewBag.UnsubscribeMsg != null)
+                        {
+                            var userCreationMsg = ViewBag.UserCreatedMsg ?? "your request to unsubscribe will be proccessed soon & you must confirm your unsubscription through your email";
+
+                            <div class="alert alert-success">
+                                <strong>Sent Successfully!</strong>&nbsp;<span class="message-text">@userCreationMsg</span>
+                            </div>
+                            <input type="submit" value="Unsubscribe more" class="btn btn-warning btn-lg" formaction=@Url.Action("Index") formmethod="get" />
+                        }
+                        else
+                        {
+                            <h3>Stop Receiving more Emails</h3>
+                            <div class="group">
+                                @Html.EditorFor(m => m.UnSubscribeEmailAddress)
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                @Html.LabelFor(m => m.UnSubscribeEmailAddress)
+                            </div>
+                            <input type="submit" value="UnSubscribe" class="btn btn-primary btn-lg" formaction=@Url.Action("UnSubscribe") formmethod="post" />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+ }

@@ -1,0 +1,117 @@
+﻿@import "variables-input.scss";
+
+.home-section {
+    padding: 10px 40px 55px 40px;
+
+    .form-group {
+        position: relative;
+        margin: 40px 0 20px 0;
+    }
+
+    .form-group > label.control-label {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    .form-group input {
+        border: 0;
+        border-bottom: 1px solid gray;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .form-group input:active, .form-group input:focus {
+        border: 0;
+        border-bottom: 2px solid gray;
+        border-radius: 0;
+        box-shadow: none;
+
+        ~ label.control-label {
+            bottom: auto;
+            top: -35px;
+        }
+    }
+
+    .form-group input:valid + label.control-label {
+        bottom: auto;
+        top: -35px;
+    }
+
+    h3 {
+        text-align: center;
+        position: relative;
+        padding: 10px;
+        font-weight: bolder;
+        text-shadow: 1px 0 1px rgba(0,0,0,.4), -1px 0 1px rgba(0,0,0,.4), 0 1px 1px rgba(0,0,0,.4), 0 -1px 1px rgba(0,0,0,.4);
+        margin-bottom: 45px;
+        color: $input_material_label_color;
+    }
+
+    h3:after {
+        content: " ";
+        position: absolute;
+        bottom: -2px;
+        width: 102%;
+        left: -1%;
+        right: -1%;
+        border: none;
+        border-bottom: 1px solid lightgray;
+    }
+
+    input {
+        border-radius: 0;
+    }
+
+    input[type=text], input[type=email] {
+        background-color: transparent;
+    }
+
+    input[type=submit], input[type=button], button, .btn {
+        float: right;
+    }
+
+    .btn {
+        color: rgb(0, 110, 255);
+        background-color: transparent;
+        border: 1px solid rgb(0, 110, 255);
+        transition: all .6s ease;
+    }
+
+    .btn:hover {
+        color: white;
+        background-color: rgb(20, 95, 240);
+        border: 1px solid white;
+        box-shadow: 0 0 5px rgba(50, 160, 255, 0.80) !important;
+    }
+}
+
+.section-inverse {
+    background-color: #31668E;
+
+    h3 {
+        color: white;
+        text-shadow: 0 0 2px rgba(226, 226, 226, 0.45);
+    }
+
+    .btn {
+        color: #dcdcdc;
+        border: 1px solid #fff;
+        transition: all .6s ease;
+    }
+
+    .btn:hover {
+        color: white;
+        background-color: rgb(30, 130, 255);
+        border: 1px solid white;
+        box-shadow: 0 0 5px rgba(30, 130, 255, 0.7) !important;
+    }
+
+    label.control-label {
+    }
+
+    input[type=text], input[type=email] {
+    }
+}
+
+@import "input-material.scss";

@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "statics/styles/home.css",
+    "inputFile": "statics/styles/home/home.scss"
+  },
+  {
+    "outputFile": "statics/styles/subscription.css",
+    "inputFile": "statics/styles/home/subscription.scss"
+  }
+]
